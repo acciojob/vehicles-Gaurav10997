@@ -18,7 +18,7 @@ public class F1 extends Car {
          * speed 201-250: gear 5
          * speed more than 250: gear 6
          */
-        newSpeed=this.currentSpeed+rate;
+        newSpeed=this.getCurrentSpeed()+rate;
         if(newSpeed == 0) {
             stop();
             changeGear(1);
@@ -45,11 +45,9 @@ public class F1 extends Car {
         //for all other cases, change the gear accordingly
 
         if(newSpeed > 0) {
-            changeSpeed(newSpeed, getCurrentDirection());
+            changeSpeed(newSpeed, this.getCurrentDirection());
         }
     }
 
-    private int getCurrentDirection() {
-            return this.currentDirection;
-    }
+
 }
