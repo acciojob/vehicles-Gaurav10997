@@ -1,10 +1,9 @@
 package com.driver;
 
 public class F1 extends Car {
-     String name ;
-     boolean isManual ;
+
     public F1(String name, boolean isManual) {
-      super(name, isManual);
+        super(name,4,2,8,isManual,"Racing",1);
         //Use arbitrary values for parameters which are not mentioned
     }
 
